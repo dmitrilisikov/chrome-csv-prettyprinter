@@ -1,0 +1,17 @@
+{
+    "name": "Chrome CSV Pretty Printer",
+    "version": "0.1",
+    "description": "If the content of the page is a CSV, will show it as a table",
+    "permissions": [
+        "activeTab"
+    ],
+    "content_scripts": [
+      {
+        "matches": ["<all_urls>"],
+        "run_at": "document_idle",
+        "css": ["styles/bootstrap.min.css"],
+        "js": ["src/printer.js"]
+      }
+    ],
+    "manifest_version": 2
+}
